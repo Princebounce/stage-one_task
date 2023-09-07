@@ -14,19 +14,21 @@ function updateDayOfWeek() {
   document.getElementById("dayOfWeek").textContent = dayOfWeek;
 }
 
-// Function to update the current UTC+1 time
-function updateUTCPlusOneTime() {
-  const utcTimeElement = document.getElementById("utcTime");
-  const utcOffset = 1; // UTC+1
+// Function to update the current UTC date and time 
+function updateUTCDateAndTime() {
+  const dateElement = document.getElementById("utcDate");
+  const timeElement = document.getElementById("utcTime");
   setInterval(() => {
     const now = new Date();
-    const utcTime = new Date(now.getTime() + utcOffset * 60 * 60 * 1000);
-    utcTimeElement.textContent = utcTime.toISOString();
+    const utcDate = now.toDateString();
+    const utcTime = now.toTimeString();
+    dateElement.textContent = `Date: ${utcDate}`;
+    timeElement.textContent = `Time: ${utcTime}`;
   }, 1000);
 }
 
-// Call the functions when the page loads
+// function call
 window.onload = function () {
   updateDayOfWeek();
-  updateUTCPlusOneTime(); // Call the updated function for UTC+1 time
+  updateUTCDateAndTime(); 
 };

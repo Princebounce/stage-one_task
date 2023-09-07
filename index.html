@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Personal Web Page</title>
+    <title>Satge One</title>
     <link rel="stylesheet" href="index.css" />
     <script src="index.js"></script>
 
@@ -12,8 +12,8 @@
     <header>
       <h1 data-testid="slackUserName">Princebounce</h1>
       <img
-        src="slack-profile-picture.jpg"
-        alt="Princebounce"
+        src="princebounce.jpg"
+        alt="princebounce"
         data-testid="slackDisplayImage"
       />
     </header>
@@ -24,21 +24,19 @@
         </h2>
       </section>
       <section>
-        <h2 data-testid="currentUTCTime">
-          Current UTC Time: <span id="utcTime"></span>
-        </h2>
+        <h2 data-testid="currentUTCTime">Current UTC Date and Time:</h2>
+        <p id="utcDate"></p>
+        <p id="utcTime"></p>
       </section>
       <section>
         <h2 data-testid="myTrack">Track: Frontend</h2>
       </section>
       <section>
-        <h2>GitHub Repository:</h2>
+        <button>Repository:<button>
         <a
           href="https://github.com/Princebounce/stage-one_task"
           data-testid="githubURL"
-          >
-          <button> Repository ></button>
-          </a
+          >https://github.com/Princebounce/stage-one_task</a
         >
       </section>
     </main>
